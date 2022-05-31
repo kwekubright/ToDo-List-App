@@ -5,7 +5,7 @@ Template for creating project using webpack
 
 
 ## Usage
-This package provides a the environment to bootstrap a webpack project
+This package provides the environment to bootstrap a webpack project
 
 
 ### Server
