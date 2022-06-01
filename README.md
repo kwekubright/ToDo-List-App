@@ -10,14 +10,13 @@ This a simple ToDo List application
 To get a local copy follow these simple steps:
 
 - Clone this repo and open the folder containing the clone in your terminal
-- Run these commands to nstall the dev dependencies and get started:
+- Run these commands to install the dev dependencies and get started:
 
 ```
 $npm install
 $npm start
 ```
-
-- 
+- Access the app at localhost:8080
 
 ### Requirements
 
