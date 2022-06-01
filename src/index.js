@@ -24,10 +24,7 @@ const loadTask = () => {
 }
 
 const el = document.getElementById('task-list');
-Sortable.create(el, {
-  // Element dragging ended event callback
-  onEnd: (evt) => {}
-});
+Sortable.create(el);
 
 // Let's render the task list
 document.getElementById('task-list').innerHTML = loadTask();
