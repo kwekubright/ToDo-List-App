@@ -2,19 +2,19 @@
 
 ## Description
 This a simple ToDo List application
-https://user-images.githubusercontent.com/5249414/171475806-edbaf696-59ae-4188-863a-a76097a2b5d5.mov
+
+[https://user-images.githubusercontent.com/5249414/171475806-edbaf696-59ae-4188-863a-a76097a2b5d5.mov](video)
 
 ## Getting Started
 
 To get a local copy follow these simple steps:
 
-```
-Clone this repo and open the folder containing the clone in your terminal
-Run these commands to nstall the dev dependencies and get started:
+- Clone this repo and open the folder containing the clone in your terminal
+- Run these commands to nstall the dev dependencies and get started:
 
+```
 $npm install
 $npm start
-
 ```
 
 - 
