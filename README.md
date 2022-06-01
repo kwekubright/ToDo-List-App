@@ -1,30 +1,27 @@
-# Todo List App
+## Todo List App
 
 ## Description
 This a simple ToDo List application
+https://user-images.githubusercontent.com/5249414/171475806-edbaf696-59ae-4188-863a-a76097a2b5d5.mov
 
-## Development Quickstart
+## Getting Started
+
+To get a local copy follow these simple steps:
 
 ```
-$ git clone https://github.com/kwekubright/webpack-skeleton.git
-$ cd webpack-skeleton
-$ npm install
-$ npm build
-$ npm start
+Clone this repo and open the folder containing the clone in your terminal
+Run these commands to nstall the dev dependencies and get started:
+
+$npm install
+$npm start
+
 ```
+
+- 
 
 ### Requirements
 
 You will need [Node.js] with [NPM]
-
-Be sure that all commands run under the correct Node version, e.g.,
-if using [nvm], install the correct version with
-
-Install the development dependencies with
-
-```
-$ npm install
-```
 
 ## Author
 
