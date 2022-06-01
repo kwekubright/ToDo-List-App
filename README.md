@@ -5,6 +5,10 @@ This a simple ToDo List application
 
 <img width="540" alt="Screenshot 2022-06-01 at 7 45 36 PM" src="https://user-images.githubusercontent.com/5249414/171479450-800e5323-23e8-4083-9fbc-7ee55ce61ad3.png">
 
+### Live Demo
+
+- https://kwekubright.github.io/ToDo-List-App/
+
 ## Getting Started
 
 To get a local copy follow these simple steps:
