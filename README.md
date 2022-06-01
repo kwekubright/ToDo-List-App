@@ -1,38 +1,30 @@
-# Webpack Skeleton
+## Todo List App
 
 ## Description
-Template for creating project using webpack
+This a simple ToDo List application
 
+<img width="540" alt="Screenshot 2022-06-01 at 7 45 36 PM" src="https://user-images.githubusercontent.com/5249414/171479450-800e5323-23e8-4083-9fbc-7ee55ce61ad3.png">
 
-## Usage
-This package provides the environment to bootstrap a webpack project
+### Live Demo
 
+- https://kwekubright.github.io/ToDo-List-App/
 
-### Server
-The server hosts project on port:8080
+## Getting Started
 
-## Development Quickstart
+To get a local copy follow these simple steps:
+
+- Clone this repo and open the folder containing the clone in your terminal
+- Run these commands to install the dev dependencies and get started:
 
 ```
-$ git clone https://github.com/kwekubright/webpack-skeleton.git
-$ cd webpack-skeleton
-$ npm install
-$ npm build
-$ npm start
+$npm install
+$npm start
 ```
+- Access the app at localhost:8080
 
 ### Requirements
 
 You will need [Node.js] with [NPM]
-
-Be sure that all commands run under the correct Node version, e.g.,
-if using [nvm], install the correct version with
-
-Install the development dependencies with
-
-```
-$ npm install
-```
 
 ## Author
 
