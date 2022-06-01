@@ -1,15 +1,7 @@
-# Webpack Skeleton
+# Todo List App
 
 ## Description
-Template for creating project using webpack
-
-
-## Usage
-This package provides the environment to bootstrap a webpack project
-
-
-### Server
-The server hosts project on port:8080
+This a simple ToDo List application
 
 ## Development Quickstart
 
