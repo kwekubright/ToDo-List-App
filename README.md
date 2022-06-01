@@ -3,7 +3,7 @@
 ## Description
 This a simple ToDo List application
 
-[https://user-images.githubusercontent.com/5249414/171475806-edbaf696-59ae-4188-863a-a76097a2b5d5.mov](video)
+<img width="540" alt="Screenshot 2022-06-01 at 7 45 36 PM" src="https://user-images.githubusercontent.com/5249414/171479450-800e5323-23e8-4083-9fbc-7ee55ce61ad3.png">
 
 ## Getting Started
 
