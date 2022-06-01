@@ -1,11 +1,10 @@
-import _ from 'lodash';
 import Sortable from 'sortablejs';
 import { Tasks } from './modules/task.mod';
 import './style.css';
 
 const loadTask = () => {
   let taskHTML = '';
-  Tasks.forEach((task, index) => {
+  Tasks.forEach((task) => {
     taskHTML
       += `<li id="liid-${task.index}" class="flex w-100 border-bottom single-task" data-taskindex="${task.index}">
     <div class="task flex flex-justify-space-between flex-align-center card w-100">
@@ -25,19 +24,9 @@ const loadTask = () => {
 }
 
 const el = document.getElementById('task-list');
-let sortable = Sortable.create(el, {
+Sortable.create(el, {
   // Element dragging ended event callback
-  onEnd: function (evt) {
-    var itemEl = evt.item;
-    evt.to;
-    evt.from;
-    evt.oldIndex;
-    evt.newIndex;
-    evt.oldDraggableIndex;
-    evt.newDraggableIndex;
-    evt.clone;
-    evt.pullMode; 
-  }
+  onEnd: (evt) => {}
 });
 
 // Let's render the task list
