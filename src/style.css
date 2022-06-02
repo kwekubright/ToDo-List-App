@@ -29,6 +29,22 @@ input:focus {
   outline: none;
 }
 
+.alert-success {
+  background-color: #6cc052;
+  padding: 0.4rem;
+  font-size: 0.875rem;
+  text-align: center;
+  color: #356227;
+}
+
+.alert-error {
+  background-color: #f4647c;
+  padding: 0.4rem;
+  font-size: 0.875rem;
+  text-align: center;
+  color: #611826;
+}
+
 .w-100 {
   width: 100%;
 }
@@ -43,6 +59,10 @@ input:focus {
 
 .border-bottom {
   border-bottom: 0.0625rem solid #dedede;
+}
+
+.fa-trash-o {
+  color: #930404;
 }
 
 /* Flex Box */
