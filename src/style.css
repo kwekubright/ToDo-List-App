@@ -45,6 +45,15 @@ input:focus {
   color: #611826;
 }
 
+.completed {
+  pointer-events: none;
+  text-decoration: line-through;
+}
+
+.single-task {
+  cursor: all-scroll;
+}
+
 .w-100 {
   width: 100%;
 }
@@ -63,6 +72,11 @@ input:focus {
 
 .fa-trash-o {
   color: #930404;
+  cursor: default;
+}
+
+p#clear-all {
+  cursor: pointer;
 }
 
 /* Flex Box */
@@ -114,7 +128,7 @@ input:focus {
 }
 
 #app-container .wrapper {
-  width: 60vw;
+  width: 90vw;
   box-shadow: 0 0 20px 2px #17054d;
 }
 
