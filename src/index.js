@@ -135,7 +135,7 @@ newTask.addEventListener('keyup', (e) => {
 
 // Add event listner for clear all text
 const clearAll = document.getElementById('clear-all');
-clearAll.addEventListener('click', (e) => {
+clearAll.addEventListener('click', () => {
   // Let's clear all tasks
   if (TaskManipulation.clearAllCompletedTask()) {
     // Let's render the task list
