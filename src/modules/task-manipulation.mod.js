@@ -13,7 +13,6 @@ export class TaskManipulation {
       });
       // Save task to local storage
       this.saveTask();
-      console.log(Tasks);
 
       if (add) {
         new Promise((resolve) => {
@@ -87,6 +86,55 @@ export class TaskManipulation {
       return false;
     }
 
+  }
+
+  // Change the index of the task object in the task array
+  static changeIndex = (oldIndex, newIndex) => {
+    const change = Tasks.splice(oldIndex, 1);
+    Tasks.splice(newIndex, 0, change[0]);
+    // We need to update the index of the remaining tasks
+    Tasks.forEach((task, i) => {
+      task.index = i;
+    });
+
+    // Alert the user
+    new Promise((resolve) => {
+      resolve(Alert.showSuccess('Task moved successfully'));
+    });
+
+    // Save task to local storage
+    this.saveTask();
+  }
+
+  // Clear all completed tasks
+  static clearAllCompletedTask = () => {
+    const clear = Tasks.filter((task) => {
+      return task.checked === true;
+    });
+
+    clear.forEach((clear) => {
+      Tasks.splice(clear.index, 1);
+      // We need to update the index of the remaining tasks
+      Tasks.forEach((task, i) => {
+        task.index = i;
+      });
+    });
+    
+    // Save task to local storage
+    this.saveTask();
+
+    if (clear) {
+      new Promise((resolve) => {
+        resolve(Alert.showSuccess('Completed tasks cleared successfully'));
+      });
+      return true;
+    }
+    else {
+      new Promise((resolve) => {
+        resolve(Alert.showError());
+      });
+      return false;
+    } 
   }
 
   // Save task to local storage

@@ -1,6 +1,7 @@
 import Sortable from 'sortablejs';
 import { Tasks } from './modules/task.mod';
 import { TaskManipulation } from './modules/task-manipulation.mod';
+import { UpdateTaskStatus } from './modules/task-status.mod';
 import './style.css';
 
 const loadTask = () => {
@@ -11,7 +12,7 @@ const loadTask = () => {
     <div class="task flex flex-justify-space-between flex-align-center card w-100">
     <span class="task-name flex flex-justify-start flex-align-center">
     <input type="checkbox" id="" name="checkbox[]" ${(task.checked) ? "checked" : ""} class="checkbox">
-    <input class="editable-task" data-liid="${task.index}" value="${task.description}">
+    <input class="editable-task ${(task.checked) ? "completed" : ""}" data-liid="${task.index}" value="${task.description}">
     </span>
     <span class="task-delete">
     <i class="fa fa-ellipsis-v fa-lg show" aria-hidden="true"></i>
@@ -89,10 +90,31 @@ let render = () => {
 
     });
   });
+
+  // Let's add ad event listener to the checkbox
+  const checkboxItems = document.querySelectorAll('.checkbox');
+  checkboxItems.forEach((checkboxItem) => {
+    checkboxItem.addEventListener('change', (e) => {
+      // Let's update the task
+      if (UpdateTaskStatus.updateTaskStatus(e)) {
+        // Let's render the task list
+        render();
+      }
+    });
+  });
 }
 
 const el = document.getElementById('task-list');
-Sortable.create(el);
+Sortable.create(el, {
+  // Drag end event
+  onEnd: (e) => {
+    // Let's update the task
+    if (TaskManipulation.changeIndex(e.oldIndex, e.newIndex)) {
+      // Let's render the task list
+      //render();
+    }
+  }
+});
 
 render();
 
@@ -111,4 +133,13 @@ newTask.addEventListener('keyup', (e) => {
   }
 });
 
+// Add event listner for clear all text
+const clearAll = document.getElementById('clear-all');
+clearAll.addEventListener('click', () => {
+  // Let's clear all tasks
+  if (TaskManipulation.clearAllCompletedTask()) {
+    // Let's render the task list
+    render();
+  }
+});
 
