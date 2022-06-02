@@ -94,7 +94,7 @@ let render = () => {
   // Let's add ad event listener to the checkbox
   const checkboxItems = document.querySelectorAll('.checkbox');
   checkboxItems.forEach((checkboxItem) => {
-    checkboxItem.addEventListener('click', (e) => {
+    checkboxItem.addEventListener('change', (e) => {
       // Let's update the task
       if (UpdateTaskStatus.updateTaskStatus(e)) {
         // Let's render the task list
