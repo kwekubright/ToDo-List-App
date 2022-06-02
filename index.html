@@ -19,9 +19,15 @@
         <h3>Kweku Bright's Task List</h3>
         <span><i class="fa fa-refresh" aria-hidden="true"></i></span>
       </div>
+      <!-- Success alert -->
+      <span id="alert-success" class="alert alert-success hide" role="alert">
+      </span>
+      <span id="alert-error" class="alert alert-error hide" role="alert">
+        An error occured. Please try again.
+      </span>
       <div class="new-task-wrapper flex flex-justify-space-between flex-align-center card border-bottom">
         <span class="flex new-task">
-          <textarea id="new-task" rows="1" placeholder="Add a new task..."></textarea>
+          <input id="new-task" placeholder="Type your task and press ENTER key...">
         </span>
         <span><i class="fa fa-check show"></i></span>
       </div>
