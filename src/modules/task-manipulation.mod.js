@@ -47,6 +47,7 @@ export class TaskManipulation {
         resolve(Alert.showSuccess('Task removed successfully'));
       });
 
+      console.log(1);
       return true;
     }
     else {
