@@ -5,9 +5,9 @@ describe('TaskManipulation', () => {
 
   describe('Remove Task', () => { 
     test('Remove a task', () => {
-      const taskState = Tasks;
-      const taskLength = Tasks.length;
-
+      
+      
+    expect(Tasks).toBe();
       
     });
   })
