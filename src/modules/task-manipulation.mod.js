@@ -110,7 +110,7 @@ export class TaskManipulation {
   }
 
   // Save task to local storage
-  static saveTask = () => {
+  static saveTask = (tasks) => {
     if (localStorage.setItem('tasks', JSON.stringify(Tasks))) {
       return true;
     }
