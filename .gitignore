@@ -1,3 +1,4 @@
 node_modules/
 hint-report/
 dist/
+coverage/
