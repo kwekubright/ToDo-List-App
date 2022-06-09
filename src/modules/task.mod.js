@@ -35,6 +35,7 @@ export let render = (tasks) => {
 export let renderWithEventListeners = (tasks) => {
   render(tasks);
   addEventListeners(tasks);
+  TaskManipulation.saveTask(tasks);
 }
 
 export let addEventListeners = (tasks) => {
@@ -103,11 +104,25 @@ export let addEventListeners = (tasks) => {
   const editItems = document.querySelectorAll('.editable-task');
   editItems.forEach((editItem) => {
     editItem.addEventListener('keyup', (e) => {
+      // Get the index of the task to be updated
+      const index = e.currentTarget.dataset.liid;
+      // Get the new description of the task
+      const description = e.target.value;
       if (e.key === 'Enter') {
         // Let's edit the task
-        if (TaskManipulation.updateTask(e)) {
+        if (TaskManipulation.updateTask(index, description, Tasks)) {
+          TaskManipulation.saveTask();
+          
+          new Promise((resolve) => {
+            resolve(Alert.showSuccess('Task updated successfully'));
+          });
           // Let's render the task list
           renderWithEventListeners(tasks);
+        }
+        else {
+          new Promise((resolve) => {
+            resolve(Alert.showError());
+          });
         }
       }
 

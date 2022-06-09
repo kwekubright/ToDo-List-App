@@ -30,29 +30,12 @@ export class TaskManipulation {
   }
 
   // Updates the task in the list
-  static updateTask = (e) => {
-    // Get the index of the task to be updated
-    const index = e.currentTarget.dataset.liid;
-    // Get the new description of the task
-    const description = e.target.value;
-    if (description !== '') {
+  static updateTask = (index, desc, tasks) => {
+    if (desc !== '') {
       // Update the task in the list
-      const update = Tasks[index].description = description;
-      // Save task to local storage
-      this.saveTask();
+      const update = tasks[index].description = desc;
 
-      if (update) {
-        new Promise((resolve) => {
-          resolve(Alert.showSuccess('Task updated successfully'));
-        });
-        return true;
-      }
-      else {
-        new Promise((resolve) => {
-          resolve(Alert.showError());
-        });
-        return false;
-      }
+      return update || false;
     }
     else {
       return false;
@@ -110,12 +93,13 @@ export class TaskManipulation {
   }
 
   // Save task to local storage
-  static saveTask = () => {
-    if (localStorage.setItem('tasks', JSON.stringify(Tasks))) {
-      return true;
+  static saveTask = (tasks = []) => {
+    if (tasks.length === 0  ) {
+      return localStorage.setItem('tasks', JSON.stringify(Tasks)) || false;
     }
-
-    return false;
+    else {
+      return localStorage.setItem('tasks', JSON.stringify(tasks)) || false;
+    }
   }
 
 }
