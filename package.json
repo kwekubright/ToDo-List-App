@@ -32,6 +32,7 @@
     "hint": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
@@ -46,5 +47,21 @@
     "jest-environment-jsdom": "^28.1.1",
     "lodash": "^4.17.21",
     "sortablejs": "^1.15.0"
+  },
+  "jest": {
+    "verbose": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/"
+    ],
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "cobertura"
+    ],
+    "globals": {
+      "__DEV__": true
+    },
+    "testEnvironment": "jsdom"
   }
 }
