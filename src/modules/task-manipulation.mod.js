@@ -62,34 +62,20 @@ export class TaskManipulation {
   }
 
   // Clear all completed tasks
-  static clearAllCompletedTask = () => {
-    const clear = Tasks.filter((task) => {
+  static clearAllCompletedTask = (tasks) => {
+    const clear = tasks.filter((task) => {
       return task.checked === true;
     });
 
     clear.forEach((clear) => {
-      Tasks.splice(clear.index, 1);
+      tasks.splice(clear.index, 1);
       // We need to update the index of the remaining tasks
-      Tasks.forEach((task, i) => {
+      tasks.forEach((task, i) => {
         task.index = i;
       });
     });
     
-    // Save task to local storage
-    this.saveTask();
-
-    if (clear) {
-      new Promise((resolve) => {
-        resolve(Alert.showSuccess('Completed tasks cleared successfully'));
-      });
-      return true;
-    }
-    else {
-      new Promise((resolve) => {
-        resolve(Alert.showError());
-      });
-      return false;
-    } 
+    return clear || false;
   }
 
   // Save task to local storage

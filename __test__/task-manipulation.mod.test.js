@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { TaskManipulation } from "../src/modules/task-manipulation.mod";
 import LocalStorage from "../__mocks__/localstorage.js";
 import { renderWithEventListeners } from "../src/modules/task.mod";

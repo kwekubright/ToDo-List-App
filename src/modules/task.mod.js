@@ -133,8 +133,19 @@ export let addEventListeners = (tasks) => {
   const checkboxItems = document.querySelectorAll('.checkbox');
   checkboxItems.forEach((checkboxItem) => {
     checkboxItem.addEventListener('change', (e) => {
+      // Get the index of the task to be updated
+      const index = e.target.parentNode.parentNode.parentNode.getAttribute("data-taskindex");
+      // Is checkbox checked?
+      const checked = e.currentTarget.checked;
       // Let's update the task
-      if (UpdateTaskStatus.updateTaskStatus(e)) {
+      if (UpdateTaskStatus.updateTaskStatus(index, checked, tasks)) {
+        // Save task to local storage
+        TaskManipulation.saveTask(tasks);
+
+        new Promise((resolve) => {
+          resolve(Alert.showSuccess("Task marked as completed"));
+        });
+        
         // Let's render the task list
         renderWithEventListeners(tasks);
       }

@@ -1,5 +1,5 @@
 import Sortable from 'sortablejs';
-import { Tasks, render, renderWithEventListeners } from './modules/task.mod';
+import { Tasks, renderWithEventListeners } from './modules/task.mod';
 import { TaskManipulation } from './modules/task-manipulation.mod';
 import { Alert } from './modules/alerts.mod';
 import './style.css';
@@ -49,9 +49,21 @@ newTask.addEventListener('keyup', (e) => {
 const clearAll = document.getElementById('clear-all');
 clearAll.addEventListener('click', () => {
   // Let's clear all tasks
-  if (TaskManipulation.clearAllCompletedTask()) {
+  if (TaskManipulation.clearAllCompletedTask(Tasks)) {
+    // Save task to local storage
+    TaskManipulation.saveTask(Tasks);
+
+    new Promise((resolve) => {
+      resolve(Alert.showSuccess('Completed tasks cleared successfully'));
+    });
+
     // Let's render the task list
-    render(Task);
+    renderWithEventListeners(Tasks);
+  }
+  else {
+    new Promise((resolve) => {
+      resolve(Alert.showError());
+    });
   }
 });
 
