@@ -40,6 +40,5 @@
     "**/bootstrap*.css",
     "**/*.js",
     "**/*.jsx"
-    "coverage/**" ,
   ]
 }
