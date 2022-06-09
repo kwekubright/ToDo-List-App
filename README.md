@@ -34,6 +34,9 @@ You will need [Node.js] with [NPM]
 - Twitter: [@twitterhandle](https://twitter.com/kwekubright_)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/kwekubright)
 
+## Contributer
+   Richmond Adu
+- GitHub: [@assadounto](https://github.com/assadounto)
 ## 🤝 Contributing
 
 - Contributions, issues, and feature requests are welcome!
