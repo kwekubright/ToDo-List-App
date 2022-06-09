@@ -22,7 +22,6 @@ beforeAll(() => {
   document.body.innerHTML = `<ul id="task-list" class="flex flex-column w-100"></ul>`;
   renderWithEventListeners(testTasks.getItems());
 });
-console.log(testTasks.getItems());
 
 describe("TaskManipulation", () => {
   describe("removeTask", () => {
