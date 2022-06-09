@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { TaskManipulation } from "../src/modules/task-manipulation.mod";
 import LocalStorage from "../__mocks__/localstorage.js";
 import { renderWithEventListeners } from "../src/modules/task.mod";
@@ -16,7 +17,6 @@ let task = class {
 for (let i = 0; i < 3; i++) {
   testTasks.setItems(new task("Task " + i));
 }
-
 
 beforeAll(() => {
   document.body.innerHTML = `<ul id="task-list" class="flex flex-column w-100"></ul>`;

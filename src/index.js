@@ -1,5 +1,5 @@
 import Sortable from 'sortablejs';
-import { Tasks, render, renderWithEventListeners } from './modules/task.mod';
+import { Tasks, renderWithEventListeners } from './modules/task.mod';
 import { TaskManipulation } from './modules/task-manipulation.mod';
 import { Alert } from './modules/alerts.mod';
 import './style.css';
@@ -51,7 +51,7 @@ clearAll.addEventListener('click', () => {
   // Let's clear all tasks
   if (TaskManipulation.clearAllCompletedTask()) {
     // Let's render the task list
-    render(Task);
+    renderWithEventListeners(Tasks);
   }
 });
 
